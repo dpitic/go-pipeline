@@ -44,3 +44,11 @@ build:
     #     name: go test
     #     code: |
     #       go test ./...
+deploy:
+    steps:
+        - internal/docker-push:
+            username: $DOCKER_USERNAME
+            password: $DOCKER_PASSWORD
+            cmd: /pipeline/source/hello
+            tag: latest
+            repository: xwin/go-pipeline
