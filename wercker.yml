@@ -45,6 +45,7 @@ build:
     #     code: |
     #       go test ./...
 deploy:
+    # The steps that will be executed on deploy
     steps:
         - internal/docker-push:
             username: $DOCKER_USERNAME
